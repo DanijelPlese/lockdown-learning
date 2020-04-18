@@ -1,90 +1,71 @@
-/*
-console.log('Hello from SubtleCrypto.js');
-
-function showExample () {
-   console.log('Hello from SubtleCrypto.js');
-};
+function showExample() {
+  console.log('This is a function');
+}
 
 showExample();
-showExample();
-showExample();
-*/
-/*
+
 function multiplyNumbers() {
-    const result = 4 * 6;
-    return result;
+  const result = 4 * 5;
+  console.log(result);
+  return result;
 }
-const multiplication = multiplyNumbers();
-console.log(multiplication);
-console.log(multiplyNumbers())
-*/
-/*
-function multiplyNumbers(a, b) {
-    const result = a * b;
-    return result;
-}
-const multiplication = multiplyNumbers(2, 3);
-console.log(multiplication);
-*/
-/*
-// primjer 1
-function sayHello(name) {
-    return `Hello, ${name}!`
-}
-console.log(sayHello('David'));
 
-//primjer II
-function sayHello(name = 'Danijel') {
-    return `Hello, ${name}!`
+multiplyNumbers();
+
+
+const number1 = 3;
+const number2 = 4;
+
+function subtractNumbers() {
+  return number2 - number1;
 }
+
+subtractNumbers();
+
+function addNumbers(a, b) {
+  return a + b;
+}
+
+
+let result = addNumbers(2, 3);
+
+console.log(result);
+
+console.log(addNumbers(number1, number2));
+
+const name = 'David';
+
+function sayHello(name) {
+  return `Hello, ${name}!`;
+}
+
 console.log(sayHello());
 
-function yellSomething(text) {
-    return `THIS IS VERY IMPORTANT: ${text.toUpperCase()}`;
+function yellSomething(something = 'WHAT?') {
+  return `${something.toUpperCase()} THIS IS IMPORTANT! `;
 }
 
-const hello = sayHello();
-const scream = yellSomething(hello)
+console.log(yellSomething(sayHello(name)));
 
-console.log(yellSomething(sayHello()));
-*/
+console.log(yellSomething());
 
-function sayHello(name = 'Danijel') {
-    return `Hello, ${name}!`
-}
-function yellSomething(text) {
-    return `THIS IS VERY IMPORTANT: ${text.toUpperCase()}`;
+function createDiv(text) {
+  const element = document.createElement('div');
+  element.textContent = text;
+  document.body.appendChild(element)
 }
 
-const buttonElement = document.querySelector('#button');
+createDiv(yellSomething(sayHello('DAVID')));
 
-buttonElement.onclick = sayHello;
-
-console.dir(buttonElement);
-
-function buttonElementOnClick(event) {
-    const textElement = document.querySelector(`#name`)
-
-    const text = yellSomething(sayHello(textElement.value));
-
-    const yellElement = donument.createElement('div');
-
-    yellElement.textContent = text;
-    
-    document.body.appendChild(yellElement);
-}
-buttonElement.onclick = buttonElementOnClick;
-
-const imageButtonElement = document.querySelector('#button-image');
-
-function imageButtonElementOnClick() {
-    const imageTextElement = document.querySelector('img');
-
-    const 
-
-    imageTextElement.src=imageTextElement.value;
-
-    document.body.appendChild(imageTextElement);
+function sayHelloToName() {
+  const nameElement = document.querySelector('#name');
+  return sayHello(nameElement.value);
 }
 
-imageButtonElement.onclick = imageButtonElementOnClick;
+
+function saySomethingToMe(name, text = 'who are you?') {
+  const something = `Hey ${name}, ${text}`
+  return something;
+}
+
+result = saySomethingToMe('David', 'teach JavaScript faster!');

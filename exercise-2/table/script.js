@@ -1,5 +1,5 @@
 // create function that gets data from the inputs and create a new person table row 
-
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore
 /* 
       <tr>
         <td>David</td>
@@ -10,3 +10,4 @@
 */
 
 // set the onclick of the button so it removes the table row from the table
+//event.tagret -> bitno!
